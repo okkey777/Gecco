@@ -118,7 +118,7 @@ extension SpotlightView {
     }
     
     private func disappearAnimation(_ duration: TimeInterval) -> CAAnimation {
-        let convergence = spotlights.removeLast()
+        let convergence = spotlights.popLast()!
         return pathAnimation(duration, beginPath: nil, endPath: maskPath(convergence.infinitesmalPath))
     }
     
